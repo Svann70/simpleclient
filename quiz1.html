@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1/5 - PhysiLearn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Progress -->
+        <div
+            style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
+            <span>Soal 1</span>
+            <span>20%</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 20%;"></div>
+        </div>
+
+        <div class="card">
+            <h3>Apa rumus Hukum II Newton?</h3>
+            <p>Pilih jawaban yang paling tepat.</p>
+
+            <div class="btn-group">
+                <!-- Target Logic: Right answer links to result#correct, Wrong to result#wrong -->
+                <a href="quiz1-result.html#wrong" class="btn btn-option">A. F = m / a</a>
+                <a href="quiz1-result.html#correct" class="btn btn-option">B. F = m × a</a>
+                <a href="quiz1-result.html#wrong" class="btn btn-option">C. F = a / m</a>
+                <a href="quiz1-result.html#wrong" class="btn btn-option">D. F = m + a</a>
+            </div>
+        </div>
+
+        <div class="nav-row">
+            <a href="quiz.html" class="btn btn-secondary">Keluar</a>
+            <!-- Disabled Next logic visual only -->
+            <a href="#" class="btn btn-secondary" style="opacity: 0.5; cursor: not-allowed;">Pilih Jawaban 👆</a>
+        </div>
+    </div>
+</body>
+
+</html>

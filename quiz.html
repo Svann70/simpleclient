@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Quiz - PhysiLearn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container text-center">
+        <!-- Back Button inline style for absolute positioning doesn't work well in center layout, standard is better -->
+        <div style="text-align: left; margin-bottom: 1rem;">
+            <a href="index.html" class="btn btn-secondary"
+                style="width: auto; display: inline-block; padding: 0.5rem 1rem; border-radius: 50px;">← Home</a>
+        </div>
+
+        <div class="card">
+            <h1 style="font-size: 2rem;">Tantangan Fisika</h1>
+            <p>Uji pemahamanmu dengan mode interaktif!</p>
+
+            <div style="font-size: 5rem; margin: 2rem 0; animation: bounce 2s infinite;">🧠</div>
+            <!-- Standard bounce not defined, relying on slideUp default -->
+
+            <div
+                style="text-align: left; background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 0.5rem;">Aturan Main:</h3>
+                <ul style="padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 5px;">5 Soal Pilihan Ganda</li>
+                    <li style="margin-bottom: 5px;">Langsung cek jawaban benar/salah</li>
+                    <li>Penjelasan lengkap di setiap soal</li>
+                </ul>
+            </div>
+
+            <a href="quiz1.html" class="btn btn-primary" style="font-size: 1.2rem;">Mulai Sekarang! 🚀</a>
+        </div>
+    </div>
+</body>
+
+</html>

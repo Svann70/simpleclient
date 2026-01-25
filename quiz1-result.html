@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Jawaban - PhysiLearn</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Redirect logic not possible with HTML, so we rely on user clicking next -->
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Correct Section -->
+        <div id="correct" class="card feedback-msg">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🎉</div>
+            <h2>Jawaban Benar!</h2>
+            <p>Luar biasa! Kamu memahami konsep dasar.</p>
+            <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                <strong>Penjelasan:</strong><br>
+                Hukum II Newton menyatakan bahwa Gaya (F) adalah hasil kali Massa (m) dengan Percepatan (a).
+                <br><br>
+                <code style="color: var(--accent);">F = m × a</code>
+            </div>
+            <a href="quiz2.html" class="btn btn-primary">Lanjut Soal 2 →</a>
+        </div>
+
+        <!-- Wrong Section -->
+        <div id="wrong" class="card feedback-msg">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">⚠️</div>
+            <h2>Kurang Tepat</h2>
+            <p>Jangan menyerah! Mari kita pelajari.</p>
+            <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                <strong>Jawaban Benar:</strong><br>
+                F = m × a
+                <br><br>
+                <strong>Penjelasan:</strong><br>
+                Gaya berbanding lurus dengan massa dan percepatan. Rumus F = m/a adalah salah.
+            </div>
+            <a href="quiz2.html" class="btn btn-primary">Lanjut Soal 2 →</a>
+            <a href="quiz1.html" class="btn btn-secondary" style="margin-top:0.5rem">Coba Ulang</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
