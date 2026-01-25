@@ -4,41 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz 1/5 - PhysiLearn</title>
+    <title>Mulai Quiz - PhysiLearn</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <!-- Progress -->
-        <div
-            style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
-            <span>Soal 1</span>
-            <span>20%</span>
-        </div>
-        <div class="progress-container">
-            <div class="progress-bar" style="width: 20%;"></div>
-        </div>
 
-        <div class="card">
-            <h3>Apa rumus Hukum II Newton?</h3>
-            <p>Pilih jawaban yang paling tepat.</p>
+        <!-- Quiz Running Section -->
+        <div id="quiz-container">
+            <div
+                style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
+                <span id="question-number">Soal 1</span>
+                <span id="progress-text">0%</span>
+            </div>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+            </div>
 
-            <div class="btn-group">
-                <!-- Target Logic: Right answer links to result#correct, Wrong to result#wrong -->
-                <a href="quiz1-result.html#wrong" class="btn btn-option">A. F = m / a</a>
-                <a href="quiz1-result.html#correct" class="btn btn-option">B. F = m × a</a>
-                <a href="quiz1-result.html#wrong" class="btn btn-option">C. F = a / m</a>
-                <a href="quiz1-result.html#wrong" class="btn btn-option">D. F = m + a</a>
+            <div class="card">
+                <h3 id="question-text" style="min-height: 60px;">Loading...</h3>
+
+                <div id="options-container" class="btn-group" style="margin-top: 2rem;">
+                    <!-- Options injected here -->
+                </div>
+            </div>
+
+            <div class="nav-row">
+                <a href="quiz.html" class="btn btn-secondary">Keluar</a>
+                <button id="next-btn" class="btn btn-primary" style="border:none;">Lanjut</button>
             </div>
         </div>
 
-        <div class="nav-row">
-            <a href="quiz.html" class="btn btn-secondary">Keluar</a>
-            <!-- Disabled Next logic visual only -->
-            <a href="#" class="btn btn-secondary" style="opacity: 0.5; cursor: not-allowed;">Pilih Jawaban 👆</a>
+        <!-- Result Section (Initially Hidden) -->
+        <div id="result-container" style="display: none;">
+            <div class="card" style="text-align: center;">
+                <div id="result-icon" style="margin-bottom: 1rem;">
+                    <!-- SVG Icon here -->
+                </div>
+                <h2>Hasil Quiz</h2>
+                <div class="score-circle" style="
+                    font-size: 3rem; 
+                    font-weight: 800; 
+                    margin: 1rem 0;
+                    background: -webkit-linear-gradient(var(--primary), var(--accent));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                ">
+                    <span id="final-score">0%</span>
+                </div>
+                <p id="score-text" style="color: var(--text-muted);">Calculating...</p>
+
+                <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                    <button onclick="location.reload()" class="btn btn-primary">Coba Lagi</button>
+                    <a href="quiz.html" class="btn btn-secondary">Menu Utama</a>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 1rem; padding-left: 0.5rem;">Review Jawaban</h3>
+            <div id="result-details">
+                <!-- Details injected here -->
+            </div>
         </div>
+
     </div>
+
+    <script src="quiz-script.js"></script>
 </body>
 
 </html>
