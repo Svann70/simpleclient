@@ -12,6 +12,18 @@
     <div class="container">
         <!-- Quiz Running Section -->
         <div id="quiz-container">
+            <!-- Quiz Header -->
+            <div class="quiz-header">
+                <div class="quiz-header-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                        <circle cx="12" cy="12" r="3" />
+                        <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                </div>
+                <span class="quiz-header-title">Quiz Fisika</span>
+            </div>
+
             <!-- Progress Info -->
             <div class="progress-info">
                 <span id="question-number">Soal 1 dari 5</span>
@@ -24,8 +36,15 @@
             </div>
 
             <!-- Question Card -->
-            <div class="card" style="padding: 24px;">
-                <h3 id="question-text" style="font-size: 1.05rem; line-height: 1.5; min-height: 50px;">
+            <div class="card quiz-question-card">
+                <div class="question-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                    </svg>
+                    <span>Pertanyaan</span>
+                </div>
+                <h3 id="question-text" class="question-text">
                     Loading...
                 </h3>
 

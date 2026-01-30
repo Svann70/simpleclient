@@ -37,7 +37,7 @@ let userAnswers = [];
 document.addEventListener('DOMContentLoaded', () => {
     // Check if we are on the result page mode or quiz mode
     // We will use the same HTML file, but toggle visibility based on state
-    
+
     // Initial Render
     loadQuestion(0);
 
@@ -54,7 +54,7 @@ function loadQuestion(index) {
     const q = questions[index];
     document.getElementById('question-text').textContent = q.question;
     document.getElementById('question-number').textContent = `Soal ${index + 1}`;
-    
+
     // Update Progress
     const progress = ((index) / questions.length) * 100;
     document.getElementById('progress-bar').style.width = `${progress}%`;
@@ -80,17 +80,18 @@ function loadQuestion(index) {
 }
 
 function selectOption(selectedIndex, btnElement) {
-    // Remove active class from all
+    // Remove selected class from all
     const allBtns = document.getElementById('options-container').children;
     for (let btn of allBtns) {
         btn.classList.remove('selected');
-        btn.style.borderColor = 'var(--surface-border)';
-        btn.style.background = 'rgba(255, 255, 255, 0.03)';
+        // Reset to default - remove inline styles
+        btn.style.borderColor = '';
+        btn.style.background = '';
     }
 
-    // Add active to selected
+    // Add selected class to clicked button
     btnElement.classList.add('selected');
-    
+
     // Store answer
     userAnswers[currentQuestion] = selectedIndex;
 
@@ -123,9 +124,9 @@ function showResults() {
         item.style.padding = '1rem';
         item.style.marginBottom = '1rem';
         item.style.borderLeft = isCorrect ? '4px solid var(--success)' : '4px solid var(--error)';
-        
-        const statusIcon = isCorrect ? 
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-success"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>' : 
+
+        const statusIcon = isCorrect ?
+            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-success"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>' :
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-error"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"></circle><line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="2"></line><line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="2"></line></svg>';
 
         item.innerHTML = `
@@ -149,7 +150,7 @@ function showResults() {
     const percentage = Math.round((score / questions.length) * 100);
     document.getElementById('final-score').textContent = `${percentage}%`;
     document.getElementById('score-text').textContent = `Kamu menjawab ${score} dari ${questions.length} soal dengan benar!`;
-    
+
     // Change Icon based on score
     const resultIcon = document.getElementById('result-icon');
     if (percentage === 100) {
