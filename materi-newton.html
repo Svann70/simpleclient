@@ -10,42 +10,115 @@
 
 <body>
     <div class="container">
-        <a href="materi.html" class="nav-link">← Kembali ke Daftar Materi</a>
+        <!-- Back Button -->
+        <a href="materi.html" class="btn-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+            <span>Kembali</span>
+        </a>
 
-        <div class="card">
+        <!-- Page Header -->
+        <div class="page-header text-center" style="margin-top: 16px;">
+            <div class="page-icon" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
+            </div>
             <h1>Hukum Newton</h1>
-            <p>Sir Isaac Newton merumuskan tiga hukum dasar yang menjelaskan hubungan antara gaya dan gerak benda.</p>
+            <p>Tiga hukum dasar tentang gaya dan gerak</p>
+        </div>
 
-            <h3>Hukum I Newton (Kelembaman)</h3>
-            <p>"Setiap benda akan tetap diam atau bergerak lurus beraturan jika tidak ada gaya luar yang
-                mempengaruhinya."</p>
-            <div class="formula-box">
-                ΣF = 0
+        <!-- Main Content -->
+        <div class="card content-card">
+            <p class="intro-text">Sir Isaac Newton merumuskan tiga hukum dasar yang menjelaskan hubungan antara gaya dan
+                gerak benda.</p>
+
+            <!-- Newton I -->
+            <div class="concept-box">
+                <div class="concept-header">
+                    <div class="concept-number">I</div>
+                    <h3>Hukum I Newton (Kelembaman)</h3>
+                </div>
+                <p class="quote-text">"Setiap benda akan tetap diam atau bergerak lurus beraturan jika tidak ada gaya
+                    luar yang mempengaruhinya."</p>
+                <div class="formula-box">
+                    <span class="formula">ΣF = 0</span>
+                </div>
+                <p class="example-inline">Contoh: Penumpang terdorong ke depan saat mobil direm mendadak.</p>
             </div>
 
-            <h3 class="mt-4">Hukum II Newton</h3>
-            <p>"Percepatan sebuah benda berbanding lurus dengan gaya total yang bekerja padanya dan berbanding terbalik
-                dengan massanya."</p>
-            <div class="formula-box">
-                ΣF = m × a
+            <!-- Newton II -->
+            <div class="concept-box">
+                <div class="concept-header">
+                    <div class="concept-number">II</div>
+                    <h3>Hukum II Newton</h3>
+                </div>
+                <p class="quote-text">"Percepatan sebuah benda berbanding lurus dengan gaya total yang bekerja padanya
+                    dan berbanding terbalik dengan massanya."</p>
+                <div class="formula-box">
+                    <span class="formula">ΣF = m × a</span>
+                </div>
+                <div class="formula-legend">
+                    <span>F = Gaya (Newton)</span>
+                    <span>m = Massa (kg)</span>
+                    <span>a = Percepatan (m/s²)</span>
+                </div>
             </div>
-            <p style="font-size: 0.9rem;">F = Gaya (N), m = Massa (kg), a = Percepatan (m/s²)</p>
 
-            <h3 class="mt-4">Hukum III Newton (Aksi-Reaksi)</h3>
-            <p>"Untuk setiap aksi selalu ada reaksi yang sama besar dan berlawanan arah."</p>
-            <div class="formula-box">
-                F_aksi = -F_reaksi
+            <!-- Newton III -->
+            <div class="concept-box">
+                <div class="concept-header">
+                    <div class="concept-number">III</div>
+                    <h3>Hukum III Newton (Aksi-Reaksi)</h3>
+                </div>
+                <p class="quote-text">"Untuk setiap aksi selalu ada reaksi yang sama besar dan berlawanan arah."</p>
+                <div class="formula-box">
+                    <span class="formula">F<sub>aksi</sub> = -F<sub>reaksi</sub></span>
+                </div>
+                <p class="example-inline">Contoh: Saat kita mendorong dinding, dinding mendorong balik dengan gaya yang
+                    sama.</p>
             </div>
         </div>
 
-        <div class="example-box">
-            <h3>Contoh Soal</h3>
-            <p><strong>Soal:</strong> Sebuah balok bermassa 2 kg didorong dengan gaya 10 N. Berapa percepatannya?</p>
-            <p><strong>Jawab:</strong></p>
-            <p>Diketahui: m = 2 kg, F = 10 N</p>
-            <p>Jawab: a = F / m = 10 / 2 = <strong>5 m/s²</strong>.</p>
+        <!-- Example Card -->
+        <div class="card example-card">
+            <div class="example-header">
+                <div class="example-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z" />
+                    </svg>
+                </div>
+                <h3>Contoh Soal</h3>
+            </div>
+            <div class="example-content">
+                <p class="example-question">Sebuah balok bermassa 2 kg didorong dengan gaya 10 N. Berapa percepatannya?
+                </p>
+                <div class="example-solution">
+                    <p><strong>Diketahui:</strong> m = 2 kg, F = 10 N</p>
+                    <p><strong>Rumus:</strong> a = F / m (dari ΣF = m × a)</p>
+                    <p><strong>Jawab:</strong> a = 10 / 2 = <span class="answer">5 m/s²</span></p>
+                </div>
+            </div>
         </div>
 
+        <!-- Navigation -->
+        <div class="nav-row">
+            <a href="materi-gerak.html" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Sebelumnya
+            </a>
+            <a href="materi-energi.html" class="btn btn-primary">
+                Selanjutnya
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
     </div>
 </body>
 

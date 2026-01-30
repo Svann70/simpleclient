@@ -4,69 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mulai Quiz - PhysiLearn</title>
+    <title>Quiz - PhysiLearn</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-
         <!-- Quiz Running Section -->
         <div id="quiz-container">
-            <div
-                style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
-                <span id="question-number">Soal 1</span>
+            <!-- Progress Info -->
+            <div class="progress-info">
+                <span id="question-number">Soal 1 dari 5</span>
                 <span id="progress-text">0%</span>
             </div>
+
+            <!-- Progress Bar -->
             <div class="progress-container">
                 <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
             </div>
 
-            <div class="card">
-                <h3 id="question-text" style="min-height: 60px;">Loading...</h3>
+            <!-- Question Card -->
+            <div class="card" style="padding: 24px;">
+                <h3 id="question-text" style="font-size: 1.05rem; line-height: 1.5; min-height: 50px;">
+                    Loading...
+                </h3>
 
-                <div id="options-container" class="btn-group" style="margin-top: 2rem;">
+                <div id="options-container" class="options-container">
                     <!-- Options injected here -->
                 </div>
             </div>
 
+            <!-- Navigation -->
             <div class="nav-row">
-                <a href="quiz.html" class="btn btn-secondary">Keluar</a>
-                <button id="next-btn" class="btn btn-primary" style="border:none;">Lanjut</button>
+                <a href="quiz.html" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    Keluar
+                </a>
+                <button id="next-btn" class="btn btn-primary">
+                    Lanjut
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
             </div>
         </div>
 
         <!-- Result Section (Initially Hidden) -->
         <div id="result-container" style="display: none;">
-            <div class="card" style="text-align: center;">
-                <div id="result-icon" style="margin-bottom: 1rem;">
-                    <!-- SVG Icon here -->
+            <div class="card result-card">
+                <div id="result-icon" class="result-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="var(--primary)">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
                 </div>
-                <h2>Hasil Quiz</h2>
-                <div class="score-circle" style="
-                    font-size: 3rem; 
-                    font-weight: 800; 
-                    margin: 1rem 0;
-                    background: -webkit-linear-gradient(var(--primary), var(--accent));
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                ">
+                <h2 style="color: var(--text-dark);">Hasil Quiz</h2>
+                <div class="score-display">
                     <span id="final-score">0%</span>
                 </div>
-                <p id="score-text" style="color: var(--text-muted);">Calculating...</p>
+                <p id="score-text" class="score-text">Menghitung...</p>
 
-                <div style="margin-top: 2rem; display: flex; gap: 1rem;">
-                    <button onclick="location.reload()" class="btn btn-primary">Coba Lagi</button>
-                    <a href="quiz.html" class="btn btn-secondary">Menu Utama</a>
+                <div class="result-buttons">
+                    <button onclick="location.reload()" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" />
+                        </svg>
+                        Coba Lagi
+                    </button>
+                    <a href="quiz.html" class="btn btn-secondary">Menu Quiz</a>
                 </div>
             </div>
 
-            <h3 style="margin-bottom: 1rem; padding-left: 0.5rem;">Review Jawaban</h3>
-            <div id="result-details">
-                <!-- Details injected here -->
+            <!-- Review Section -->
+            <div class="review-section">
+                <h3 class="review-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        style="vertical-align: -4px; margin-right: 6px;">
+                        <path
+                            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                    </svg>
+                    Review Jawaban
+                </h3>
+                <div id="result-details">
+                    <!-- Details injected here -->
+                </div>
             </div>
         </div>
-
     </div>
 
     <script src="quiz-script.js"></script>

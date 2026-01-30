@@ -4,82 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materi Quiz - PhysiLearn</title>
+    <title>Tantangan Quiz - PhysiLearn</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container text-center">
-        <!-- Back Button inline style for absolute positioning doesn't work well in center layout, standard is better -->
-        <div style="text-align: left; margin-bottom: 1rem;">
-            <a href="index.html" class="btn btn-secondary"
-                style="width: auto; display: inline-block; padding: 0.5rem 1rem; border-radius: 50px;">← Home</a>
+    <div class="container">
+        <!-- Back Button -->
+        <a href="index.html" class="btn-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+            <span>Kembali</span>
+        </a>
+
+        <!-- Page Header -->
+        <div class="page-header text-center" style="margin-top: 16px;">
+            <div class="page-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                    <circle cx="12" cy="12" r="3" />
+                    <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+            </div>
+            <h1>Tantangan Fisika</h1>
+            <p>Uji pemahamanmu dengan quiz interaktif!</p>
         </div>
 
-        <div class="card">
-            <h1 style="font-size: 2rem;">Tantangan Fisika</h1>
-            <p>Uji pemahamanmu dengan mode interaktif!</p>
-
-            <div style="margin: 2rem 0; display: flex; justify-content: center;">
-                <svg width="140" height="140" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Main Card -->
+        <div class="card" style="text-align: center; padding: 24px;">
+            <!-- Animated Atom Icon -->
+            <div style="margin: 16px 0 24px;">
+                <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <!-- Glow -->
-                    <circle cx="50" cy="50" r="45" fill="url(#atom-glow)" fill-opacity="0.2" />
+                    <circle cx="50" cy="50" r="40" fill="url(#atom-glow)" fill-opacity="0.15" />
 
-                    <!-- Definitions -->
                     <defs>
                         <radialGradient id="atom-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                            gradientTransform="translate(50 50) rotate(90) scale(45)">
-                            <stop stop-color="#60A5FA" />
-                            <stop offset="1" stop-color="#60A5FA" stop-opacity="0" />
+                            gradientTransform="translate(50 50) rotate(90) scale(40)">
+                            <stop stop-color="#1cb0f6" />
+                            <stop offset="1" stop-color="#1cb0f6" stop-opacity="0" />
                         </radialGradient>
                     </defs>
 
                     <!-- Orbit 1 -->
-                    <ellipse cx="50" cy="50" rx="40" ry="12" stroke="#60A5FA" stroke-width="2"
-                        transform="rotate(0 50 50)" opacity="0.8">
-                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50"
-                            dur="10s" repeatCount="indefinite" />
+                    <ellipse cx="50" cy="50" rx="35" ry="12" stroke="#1cb0f6" stroke-width="2.5" fill="none"
+                        opacity="0.7">
+                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="8s"
+                            repeatCount="indefinite" />
                     </ellipse>
 
                     <!-- Orbit 2 -->
-                    <ellipse cx="50" cy="50" rx="40" ry="12" stroke="#A78BFA" stroke-width="2"
-                        transform="rotate(60 50 50)" opacity="0.8">
+                    <ellipse cx="50" cy="50" rx="35" ry="12" stroke="#58cc02" stroke-width="2.5" fill="none"
+                        opacity="0.7" transform="rotate(60 50 50)">
                         <animateTransform attributeName="transform" type="rotate" from="60 50 50" to="420 50 50"
-                            dur="10s" repeatCount="indefinite" />
+                            dur="8s" repeatCount="indefinite" />
                     </ellipse>
 
                     <!-- Orbit 3 -->
-                    <ellipse cx="50" cy="50" rx="40" ry="12" stroke="#34D399" stroke-width="2"
-                        transform="rotate(120 50 50)" opacity="0.8">
+                    <ellipse cx="50" cy="50" rx="35" ry="12" stroke="#ffc800" stroke-width="2.5" fill="none"
+                        opacity="0.7" transform="rotate(120 50 50)">
                         <animateTransform attributeName="transform" type="rotate" from="120 50 50" to="480 50 50"
-                            dur="10s" repeatCount="indefinite" />
+                            dur="8s" repeatCount="indefinite" />
                     </ellipse>
 
                     <!-- Nucleus -->
-                    <circle cx="50" cy="50" r="8" fill="#F87171">
-                        <animate attributeName="r" values="8;9;8" dur="2s" repeatCount="indefinite" />
+                    <circle cx="50" cy="50" r="10" fill="#ff4b4b">
+                        <animate attributeName="r" values="10;11;10" dur="2s" repeatCount="indefinite" />
                     </circle>
 
-                    <!-- Electron 1 -->
-                    <circle r="3" fill="#60A5FA">
-                        <animateMotion dur="4s" repeatCount="indefinite"
-                            path="M50 50 m-40 0 a 40 12 0 1 0 80 0 a 40 12 0 1 0 -80 0" />
-                    </circle>
+                    <!-- Nucleus shine -->
+                    <circle cx="47" cy="47" r="3" fill="rgba(255,255,255,0.4)" />
                 </svg>
             </div>
-            <!-- Standard bounce not defined, relying on slideUp default -->
 
-            <div
-                style="text-align: left; background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
-                <h3 style="margin-bottom: 0.5rem;">Aturan Main:</h3>
-                <ul style="padding-left: 20px; color: var(--text-muted);">
-                    <li style="margin-bottom: 5px;">5 Soal Pilihan Ganda</li>
-                    <li style="margin-bottom: 5px;">Langsung cek jawaban benar/salah</li>
+            <!-- Rules Box -->
+            <div class="rules-box">
+                <h4>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
+                        style="vertical-align: -3px; margin-right: 6px;">
+                        <path
+                            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                    </svg>
+                    Aturan Main
+                </h4>
+                <ul>
+                    <li>5 Soal pilihan ganda</li>
+                    <li>Langsung cek jawaban benar atau salah</li>
                     <li>Penjelasan lengkap di setiap soal</li>
                 </ul>
             </div>
 
-            <a href="quiz1.html" class="btn btn-primary" style="font-size: 1.2rem;">Mulai Sekarang! </a>
+            <!-- CTA Button -->
+            <a href="quiz1.html" class="btn btn-primary btn-block" style="font-size: 1.1rem; padding: 16px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                    <path
+                        d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7" />
+                </svg>
+                Mulai Sekarang!
+            </a>
+        </div>
+
+        <!-- Tips Card -->
+        <div class="card tips-card">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="tips-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 style="color: white; margin-bottom: 2px;">Tips!</h3>
+                    <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.9rem;">
+                        Baca materi dulu sebelum mengerjakan quiz untuk hasil terbaik!
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

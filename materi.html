@@ -10,57 +10,99 @@
 
 <body>
     <div class="container">
-        <div style="text-align: left; margin-bottom: 1rem;">
-            <a href="index.html" class="btn btn-secondary"
-                style="width: auto; display: inline-block; padding: 0.5rem 1rem; border-radius: 50px;">← Home</a>
+        <!-- Back Button -->
+        <a href="index.html" class="btn-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+            <span>Kembali</span>
+        </a>
+
+        <!-- Page Header -->
+        <div class="page-header" style="margin-top: 16px;">
+            <div class="page-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 14h-2v-4H7v-2h6V7h2v4h4v2h-4v4z" />
+                </svg>
+            </div>
+            <h1>Materi Pembelajaran</h1>
+            <p>Pilih topik fisika yang ingin kamu pelajari!</p>
         </div>
 
-        <h2>Materi Pembelajaran</h2>
-        <p>Pilih topik fisika yang ingin kamu pelajari hari ini.</p>
-
-        <!-- Topic 1 -->
-        <a href="materi-gerak.html" style="text-decoration: none; display: block;">
-            <div class="card">
-                <h3>Gerak Lurus <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        style="margin-left: 8px; vertical-align: -4px;">
-                        <path d="M19 13.5L12 12V7h1"></path>
-                        <path d="M12 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
-                        <path d="M12 12L9 16l-3.5-1"></path>
-                        <path d="M16 17l4 3"></path>
-                        <path d="M12 12l2.5 3.5"></path>
-                    </svg></h3>
-                <p>Pelajari tentang GLB, GLBB, kecepatan, dan percepatan benda.</p>
+        <!-- Topic Cards -->
+        <a href="materi-gerak.html" class="topic-card">
+            <div class="topic-icon motion">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7" />
+                </svg>
             </div>
+            <div class="topic-content">
+                <h3>Gerak Lurus</h3>
+                <p>Pelajari GLB, GLBB, kecepatan, dan percepatan</p>
+            </div>
+            <span class="topic-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </span>
         </a>
 
-        <!-- Topic 2 -->
-        <a href="materi-newton.html" style="text-decoration: none; display: block;">
-            <div class="card">
-                <h3>Hukum Newton <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        style="margin-left: 8px; vertical-align: -4px;">
-                        <path
-                            d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z">
-                        </path>
-                        <path d="M10 2c1 .5 2 2 2 5"></path>
-                    </svg></h3>
-                <p>Memahami gaya, massa, dan interaksi antar benda.</p>
+        <a href="materi-newton.html" class="topic-card">
+            <div class="topic-icon newton">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
             </div>
+            <div class="topic-content">
+                <h3>Hukum Newton</h3>
+                <p>Memahami gaya, massa, dan interaksi benda</p>
+            </div>
+            <span class="topic-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </span>
         </a>
 
-        <!-- Topic 3 -->
-        <a href="materi-energi.html" style="text-decoration: none; display: block;">
-            <div class="card">
-                <h3>Usaha dan Energi <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        style="margin-left: 8px; vertical-align: -4px;">
-                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-                    </svg></h3>
-                <p>Konsep kerja, energi kinetik, dan energi potensial.</p>
+        <a href="materi-energi.html" class="topic-card">
+            <div class="topic-icon energy">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
             </div>
+            <div class="topic-content">
+                <h3>Usaha dan Energi</h3>
+                <p>Konsep kerja, energi kinetik dan potensial</p>
+            </div>
+            <span class="topic-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </span>
         </a>
 
+        <!-- Info Card -->
+        <div class="card info-card" style="margin-top: 8px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="info-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                        <circle cx="12" cy="12" r="3" />
+                        <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 style="color: white; margin-bottom: 2px;">Sudah Siap?</h3>
+                    <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.9rem;">
+                        Setelah belajar, uji pemahamanmu dengan <a href="quiz.html"
+                            style="color: white; font-weight: 800;">Quiz</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
